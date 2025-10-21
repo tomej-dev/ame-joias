@@ -1,174 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Use Amê Semijoias - Realce sua beleza todos os dias" />
-    <meta property="og:description" content="Semijoias delicadas e elegantes para tornar cada momento especial." />
-    <meta property="og:image" content="https://use-ame-joias.vercel.app/images/template_og.png" />
-    <meta property="og:url" content="https://use-ame-joias.vercel.app/" />
-    <meta property="og:type" content="website" />
-    <title>Use Amê Joias</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="shortcut icon" href="./images/logo.png">
-    <script href="./scripts/script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="header-div">
-        <a href="#inicio"
-          ><img class="logo" src="./images/logo1.png" alt=""
-        /></a>
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-<li><a href="#avaliacoes">Avaliações</a></li>
-<li><a href="#porque">Por que nos escolher</a></li>
-        </ul>
-      </div>
-    </header>
-    <main id="inicio" class="hero">
-      <img class="hero-example-1" src="./images/colar1.jpeg" alt="" />
-      <div class="center-hero">
-        <h2 class="hero-phrase">Realce sua beleza<br />todos os dias</h2>
-        <a class="cta-button" style="text-decoration: none; color: #000;" href="https://wa.me/7199362017?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20semi-joias." target="_blank" 
-   rel="noopener noreferrer">Falar no WhatsApp</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Use Amê Semijoias - Realce sua beleza todos os dias" />
+  <meta property="og:description" content="Semijoias delicadas e elegantes para tornar cada momento especial." />
+  <meta property="og:image" content="https://use-ame-joias.vercel.app/images/template_og.png" />
+  <meta property="og:url" content="https://use-ame-joias.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <title>Use Amê Joias</title>
+  <script href="./scripts/script.js" defer></script>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="shortcut icon" href="./images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="header-div">
+      <a href="#inicio"><img class="logo" src="./images/logo1.png" alt="Logo" /></a>
+
+      <!-- Ícone de menu (hambúrguer) -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <img class="hero-example-2" src="./images/colar14.jpeg" alt="" />
-    </main>
+      <!-- Navegação desktop -->
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#colecao">Coleção</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#porque">Por que nos escolher</a></li>
+      </ul>
+    </div>
 
-    <section class="card-section-1">
-      <div class="card-container-1">
-        <div class="card-text-container">
-          <h3>Colares que transformam o seu estilo</h3>
+    <!-- Sidebar (menu mobile) -->
+    <nav id="sidebar">
+      <button class="close-btn" onclick="toggleMenu()">×</button>
+      <ul>
+        <li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
+        <li><a href="#colecao" onclick="toggleMenu()">Coleção</a></li>
+        <li><a href="#avaliacoes" onclick="toggleMenu()">Avaliações</a></li>
+        <li><a href="#porque" onclick="toggleMenu()">Por que nos escolher</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="inicio" class="hero">
+    <img class="hero-example-1" src="./images/colar1.jpeg" alt="" />
+    <div class="center-hero">
+      <h2 class="hero-phrase">Realce sua beleza<br />todos os dias</h2>
+      <a class="cta-button" style="text-decoration: none; color: #000;"
+        href="https://wa.me/7199362017?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20semi-joias."
+        target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+    </div>
+
+    <img class="hero-example-2" src="./images/colar14.jpeg" alt="" />
+  </main>
+
+  <section class="produtos-section">
+    <h2>Coleção de Acessórios</h2>
+    <div class="produtos-grid">
+
+
+      <div class="produto" id="colecao">
+        <img src="./images2/brinco-triplo.jpeg" alt="Piercing Fake">
+        <h3>Piercing Fake</h3>
+        <p>R$ 80,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Piercing Fake."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/brinco-gota.jpeg" alt="Brinco Gota Lisa">
+        <h3>Brinco Gota Lisa</h3>
+        <p>R$ 188,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Brinco Gota Lisa."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/brinco.jpeg" alt="Brinco Ear Cuff">
+        <h3>Brinco Ear Cuff</h3>
+        <p>R$ 180,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Brinco Ear Cuff."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/brinco-quintuplo.jpeg" alt="Argola 5 Fios">
+        <h3>Argola 5 Fios</h3>
+        <p>R$ 175,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre a Argola 5 Fios."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/Esgotado.jpg" alt="Argola">
+        <h3>Argola</h3>
+        <p>R$ 90,00</p>
+        <!-- <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre a Argola." class="btn-whatsapp" target="_blank">Esgotado</a> -->
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/colar.jpeg" alt="Colar Ponto de Luz Redondo">
+        <h3>Colar Ponto de Luz Redondo</h3>
+        <p>R$ 187,40</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Colar Ponto de Luz Redondo."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/Esgotado.jpg" alt="Colar Ponto de Luz Coração">
+        <h3>Colar Ponto de Luz Coração</h3>
+        <p>R$ 187,40</p>
+        <!-- <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Colar Ponto de Luz Coração." class="btn-whatsapp" target="_blank">Esgotado</a> -->
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/pulseira-corrente.jpeg" alt="Pulseira Elos">
+        <h3>Pulseira Elos</h3>
+        <p>R$ 165,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre a Pulseira Elos."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/bracelete.jpeg" alt="Bracelete">
+        <h3>Bracelete</h3>
+        <p>R$ 115,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Bracelete." class="btn-whatsapp"
+          target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/brinco-perolas.jpeg" alt="Brinco de Pérolas">
+        <h3>Brinco de Pérolas</h3>
+        <p>R$ 124,90</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Brinco de Pérolas."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/colar-corrente.jpeg" alt="Choker Elos">
+        <h3>Choker Elos</h3>
+        <p>R$ 224,90</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Choker Elos." class="btn-whatsapp"
+          target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+      <div class="produto">
+        <img src="./images2/colar-joias.jpeg" alt="Colar Palito">
+        <h3>Colar Palito</h3>
+        <p>R$ 139,00</p>
+        <a href="https://wa.me/5571999362017?text=Olá! Gostaria de saber mais sobre o Colar Palito."
+          class="btn-whatsapp" target="_blank">Falar no WhatsApp</a>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-container" id="porque">
+      <h4>Por que escolher a Use Amê Joias?</h4>
+      <p class="porque">
+        Porque acreditamos que cada mulher merece sentir-se única. Aqui, você
+        encontra semi-joias feitas para expressar a sua essência.
+      </p>
+      <p class="second-child">
+        Veja abaixo alguns feedbacks de nossos clientes
+      </p>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container" id="avaliacoes" style="scroll-padding-top: 16rem;">
+      <h2>O que dizem os nossos clientes</h2>
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review">
           <p>
-            Peças únicas que iluminam o seu visual e destacam a sua
-            personalidade.
+            “As peças são maravilhosas, delicadas e de excelente qualidade.
+            Estou apaixonada!”
           </p>
+          <span>– Mariana S.</span>
         </div>
-        <div>
-          <img class="card-image" src="./images/colar7.jpeg" alt="" />
-        </div>
-      </div>
-    </section>
 
-    <section class="card-section-2">
-      <div class="card-container-2">
-        <div class="card-text-container-2">
-          <h3>Pulseiras Que Encantam em Cada Detalhe</h3>
+        <!-- Review 2 -->
+        <div class="review">
           <p>
-            Do clássico ao moderno, escolha a pulseira que traduz o seu estilo.
+            “Comprei um conjunto para presente e a pessoa amou! Atendimento
+            impecável.”
           </p>
+          <span>– Joana P.</span>
         </div>
-        <div>
-          <img class="card-image" src="./images/pulseira2.jpeg" alt="" />
+
+        <!-- Review 3 -->
+        <div class="review">
+          <p>
+            “Design moderno e elegante. Uso diariamente e continua perfeito.”
+          </p>
+          <span>– Cláudia M.</span>
         </div>
-      </div>
-    </section>
 
-    <section class="about">
-      <div class="about-container" id="porque">
-        <h4>Por que escolher a Use Amê Joias?</h4>
-        <p>
-          Porque acreditamos que cada mulher merece sentir-se única. Aqui, você
-          encontra semi-joias feitas para expressar a sua essência.
-        </p>
-        <p class="second-child">
-          Veja abaixo alguns feedbacks de nossos clientes
-        </p>
-      </div>
-    </section>
+        <!-- Review 4 -->
+        <div class="review">
+          <p>
+            “Entrega super rápida e embalagem lindíssima. Recomendo a todos.”
+          </p>
+          <span>– Sofia R.</span>
+        </div>
 
-    <section class="reviews"  >
-      <div class="container" id="avaliacoes" style="scroll-padding-top: 16rem;">
-        <h2>O que dizem os nossos clientes</h2>
-        <div class="reviews-grid">
-          <!-- Review 1 -->
-          <div class="review">
-            <p>
-              “As peças são maravilhosas, delicadas e de excelente qualidade.
-              Estou apaixonada!”
-            </p>
-            <span>– Mariana S.</span>
-          </div>
-
-          <!-- Review 2 -->
-          <div class="review">
-            <p>
-              “Comprei um conjunto para presente e a pessoa amou! Atendimento
-              impecável.”
-            </p>
-            <span>– Joana P.</span>
-          </div>
-
-          <!-- Review 3 -->
-          <div class="review">
-            <p>
-              “Design moderno e elegante. Uso diariamente e continua perfeito.”
-            </p>
-            <span>– Cláudia M.</span>
-          </div>
-
-          <!-- Review 4 -->
-          <div class="review">
-            <p>
-              “Entrega super rápida e embalagem lindíssima. Recomendo a todos.”
-            </p>
-            <span>– Sofia R.</span>
-          </div>
-
-          <!-- Review 5 -->
-          <div class="review">
-            <p>
-              “Peças de semi joia que parecem jóias verdadeiras. Vale cada
-              cêntavo!”
-            </p>
-            <span>– João P.</span>
-          </div>
+        <!-- Review 5 -->
+        <div class="review">
+          <p>
+            “Peças de semi joia que parecem jóias verdadeiras. Vale cada
+            cêntavo!”
+          </p>
+          <span>– João P.</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cta">
-  <div class="cta-container">
-    <h2>Gostou do que viu?</h2>
-    <p>Entre em contacto connosco e descubra a peça perfeita para si.</p>
-    <a class="cta-button" style="text-decoration: none; color: #000;" href="https://wa.me/7199362017?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20semi-joias." target="_blank" 
-   rel="noopener noreferrer">Falar no WhatsApp</a>
-  </div>
-</section>
-<footer class="footer">
-<div class="footer-container">
-<img class="footer-logo" src="./images/logo1.png" alt="Logo Use Amê Joias" />
-<ul class="footer-nav">
-<li><a href="#inicio">Início</a></li>
-<li><a href="#avaliacoes">Avaliações</a></li>
-<li><a href="#porque">Por que nos escolher</a></li>
-</ul>
-
-
-<div class="footer-contact">
-<p><strong><i class="fa-brands fa-instagram"></i> Instagram:</strong> <a href="https://instagram.com/useamejoias__" target="_blank" rel="noopener noreferrer">@useamejoias__</a></p>
-<p><strong><i class="fa-brands fa-whatsapp"></i> Whatsapp:</strong> <a href="https://wa.me/7199362017?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20semi-joias." target="_blank" 
-   rel="noopener noreferrer">(71) 9 99362017</a></p>
-</div>
+  <section class="cta">
+    <div class="cta-container">
+      <h2>Gostou do que viu?</h2>
+      <p>Entre em contacto connosco e descubra a peça perfeita para si.</p>
+      <a class="cta-button" style="text-decoration: none; color: #000;"
+        href="https://wa.me/7199362017?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20semi-joias."
+        target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <img class="footer-logo" src="./images/logo1.png" alt="Logo Use Amê Joias" />
+      <ul class="footer-nav">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+        <li><a href="#porque">Por que nos escolher</a></li>
+      </ul>
 
 
-<p class="footer-copy">© 2025 Use Amê Joias. Todos os direitos reservados.</p>
-</div>
-</footer>
-  </body>
+      <div class="footer-contact">
+        <p><strong><i class="fa-brands fa-instagram"></i> Instagram:</strong> <a
+            href="https://instagram.com/useamejoias__" target="_blank" rel="noopener noreferrer">@useamejoias__</a></p>
+        <p><strong><i class="fa-brands fa-whatsapp"></i> Whatsapp:</strong> <a
+            href="https://wa.me/7199362017?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20as%20semi-joias."
+            target="_blank" rel="noopener noreferrer">(71) 9 99362017</a></p>
+      </div>
+
+
+      <p class="footer-copy">© 2025 Use Amê Joias. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+
 </html>
