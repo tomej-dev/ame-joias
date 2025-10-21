@@ -334,7 +334,7 @@ header {
 
 .porque{
         font-size: 2rem;
-        max-width: 50%;
+        max-width: 70%;
 }
 
 .about-container .second-child{
@@ -422,7 +422,7 @@ margin-bottom: 25px;
 .cta-button {
 background: #fff;
 color: #4a3c2a;
-padding: 12px 24px;
+padding: 10px 18px;
 font-size: 1rem;
 font-weight: bold;
 border: none;
